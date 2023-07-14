@@ -1,0 +1,5 @@
+#!/bin/bash
+
+g++ ../resources/sha256.cpp attack.cpp -o binary
+./binary /tmp/rainbow_table.db /tmp/password_hash /tmp/out.password 8 5000 /tmp/password_clear
+rm binary

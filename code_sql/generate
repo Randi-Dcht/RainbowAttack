@@ -1,0 +1,6 @@
+#!/bin/bash
+
+gcc -c ../resources/db/sqlite3.c
+g++ ../resources/sha256.cpp sqlite3.o generate.cpp -o binary
+./binary 180000000 8 6 10 /tmp/rainbow_table.sql
+rm binary sqlite3.o

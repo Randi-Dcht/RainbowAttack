@@ -1,0 +1,6 @@
+#!/bin/bash
+
+gcc -c ../resources/db/sqlite3.c
+g++ ../resources/sha256.cpp sqlite3.o attack.cpp -o binary
+./binary /tmp/rainbow_table.db /tmp/password_hash /tmp/out.password 8 /tmp/password_clear
+rm binary sqlite3.o

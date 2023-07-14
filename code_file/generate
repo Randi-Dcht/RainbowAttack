@@ -1,0 +1,5 @@
+#!/bin/bash
+
+g++ ../resources/sha256.cpp generate.cpp -o binary
+./binary 3900000 5000 8 8 /tmp/rainbow_table.db
+rm binary
